@@ -18,8 +18,11 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path
 from SoloApp import views
+from SoloApp1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homePageView)
+    path('', views.homePageView, name = "home"),
+    #path('', views.index),
+    path('about/', views.about, name = "about")
 ]
